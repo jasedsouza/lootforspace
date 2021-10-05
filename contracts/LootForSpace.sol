@@ -1308,7 +1308,7 @@ contract LootForSpace is ERC721Enumerable, ReentrancyGuard, Ownable {
         "Hellacious Shotgun",
         "Backbreaker Shotgun",
         "Disruptor Assault Rifle",
-        "Stampede Assualt Rifle",
+        "Stampede Assault Rifle",
         "Ray Beam Assault Rifle",
         "Authorizer Assault Rifle",
         "Interrogator Assault Rifile",
@@ -1421,7 +1421,7 @@ contract LootForSpace is ERC721Enumerable, ReentrancyGuard, Ownable {
         "Corrosive Ammo",
         "Immovable Turret",
         "Holo Clone",
-        "Alien Pet",
+        "Alien Guardian",
         "Medi Drone",
         "Reflective Cloak",
         "Combat Drone"
@@ -1490,7 +1490,7 @@ contract LootForSpace is ERC721Enumerable, ReentrancyGuard, Ownable {
 
     function tokenURI(uint256 tokenId) override public view returns (string memory) {
         string[15] memory parts;
-        parts[0] = '<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 350 350"><style>.base { fill: #FFC000; font-family: Helvetica, Tahoma, sans-serif; font-size: 14px; }</style><rect width="100%" height="100%" fill="#1F51FF" /><text x="10" y="20" class="base">';
+        parts[0] = '<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 350 350"><style>.base { fill: gold; font-family: Helvetica, Tahoma, sans-serif; font-size: 14px; }</style><rect width="100%" height="100%" fill="#000080" /><text x="10" y="20" class="base">';
 
         parts[1] = getWeapon(tokenId);
 
@@ -1514,7 +1514,7 @@ contract LootForSpace is ERC721Enumerable, ReentrancyGuard, Ownable {
 
         parts[11] = getItem(tokenId);
 
-        parts[12] = '</text><text x="10" y="120" class="base">';        
+        parts[12] = '</text><text x="10" y="140" class="base">';        
 
         parts[13] = getSpecial(tokenId);        
 
